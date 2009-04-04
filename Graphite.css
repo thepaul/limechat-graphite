@@ -125,7 +125,7 @@ body.console .event .message {
 }
 
 .line[highlight=true] span.message {
-    background-color: #383744;
+    background-color: #663300;
     color: #fff;
     margin: 0;
 }
@@ -216,7 +216,7 @@ a {
 }
 
 .line[highlight=true] .sender {
-    background-color: #383744;
+    background-color: #663300;
     padding: 0.4em;
     color: #fff;
 }
