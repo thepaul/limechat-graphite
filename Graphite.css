@@ -121,6 +121,10 @@ a:link, a:visited, a:hover, a:active {
     text-align: right;
 }
 
+body.console .event[type=join], body.console .event[type=part], body.console .event[type=quit], body.console .event[type=mode], body.console .event[type=nick] {
+	display: none;
+}
+
 body.console .event .message {
 	margin: 0;
 }
