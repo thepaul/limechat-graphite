@@ -78,6 +78,14 @@ a:link, a:visited, a:hover, a:active {
 
 .place { color: #3387bc; }
 
+.line .place {
+	padding: 0.4em 0;
+}
+
+.event .place {
+	padding: 0;
+}
+
 .line .message {
     margin: 0 0 0 134px;
     padding: 0.4em;
@@ -104,12 +112,9 @@ a:link, a:visited, a:hover, a:active {
     font: bold 11px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
-body.console .sender {
-	width: 70px;
-}
-
-body.console .line .message {
-	margin-left: 194px;
+.line .place {
+    float: right;
+    text-align: right;
 }
 
 body.console .event .message {
