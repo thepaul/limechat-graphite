@@ -5,6 +5,12 @@ log-view:
     nickname-format: '%n'
     scroller-highlight-color: '#d33b54'
 
+input-text:
+    font-family: 'Lucida Grande'
+    font-size: 13.0
+    background-color: '#000'
+    color: '#f0f0f0'
+
 member-list:
     font-family: 'Lucida Grande'
     font-size: 11
