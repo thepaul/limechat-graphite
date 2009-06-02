@@ -31,6 +31,10 @@ a:link, a:visited, a:hover, a:active {
     display: block;
 }
 
+body.normal .text span span {
+	display: inline;
+}
+
 .text .message span {
     display: inline;
 }
