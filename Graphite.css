@@ -402,6 +402,21 @@ a {
     color: #444;
 }
 
+#topic {
+  background-color: #EEE;
+  border-bottom: 1px solid #999;
+  top-color: #FFF;
+  bottom-color: #EEE;
+  padding: 2px 0;
+  margin: 0;
+  height: 16px;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  text-align: center;
+}
 
 /* mIRC color effects */
 .effect[color-number='0'] {}
