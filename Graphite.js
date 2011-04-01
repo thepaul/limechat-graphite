@@ -39,9 +39,6 @@ function createTopic() {
   topic = document.createElement('div');
   topic.id = "topic";
   document.body.appendChild(topic);
-  topic.onclick = function () {
-    toggleEvents();
-  }
   return topic;
 }
 
