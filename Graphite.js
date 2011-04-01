@@ -47,10 +47,13 @@ function createTopic() {
 
 function doTopic(node) {
   markTopicEvent(node);
-  var topic = document.getElementById('topic') || createTopic();
   var message_node = node.lastChild;
   if(message_node.getAttribute("type") == "topic") {
-    topic.innerText = message_node.innerText.match(/opic: (.*)$/)[1];
+    var topictxt = message_node.innerText.match(/opic: (.*)$/)[1];
+    if(topictxt != "") {
+      var topic = document.getElementById('topic') || createTopic();
+      topic.innerText = topictxt;
+    }
   }
 }
 
@@ -59,7 +62,6 @@ function doInlineImages() {
 }
 
 function processNode(ev) {
-  // TODO: fix topic bugs
   var inserted_node = ev.target;
   if(document.body.className.includes("normal")) {
     markDuplicateTimestamp(inserted_node);
