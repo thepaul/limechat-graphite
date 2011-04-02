@@ -35,6 +35,16 @@ function toggleEvents() {
     elements[i].style.display = (elements[i].style.display != 'none' ? 'none' : 'block');
 }
 
+// Matches URLs with common protocol types or those starting with 'www.' or
+// 'ftp.'. Allows (matched) parentheses in a URL, like Wikipedia uses, or
+// putting the whole URL in parens (in which case, don't include them in the
+// link). Ignores trailing periods, commas, colons, etc.
+url_finder = /\b(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/ig ;
+
+function linkifyUrls(text) {
+  return text.replace(url_finder, "<a href=\"$&\">$&</a>");
+}
+
 function createTopic() {
   topic = document.createElement('div');
   topic.id = "topic";
@@ -49,7 +59,7 @@ function doTopic(node) {
     var topictxt = message_node.innerText.match(/opic: (.*)$/)[1];
     if(topictxt != "") {
       var topic = document.getElementById('topic') || createTopic();
-      topic.innerText = topictxt;
+      topic.innerHTML = linkifyUrls(topictxt);
     }
   }
 }
